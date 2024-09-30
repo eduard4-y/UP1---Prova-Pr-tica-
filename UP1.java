@@ -7,16 +7,15 @@ public class Main {
     double raio = scanner.nextDouble();
     double area = Math.PI * Math.pow(raio, 2);
     System.out.println("A área do círculo é: " + area);
-  }
-
+   }
+  
+ }
   ----------------------------------------------------------------------------------------------------------
-  }
-
-
+ 
+ //Faça um Programa que converta metros para centímetros.
 import java.util.Scanner;
 public class ConverterMetrosCentimetros {
-    //Faça um Programa que converta metros para centímetros.
-
+   
         public static void main(String[] args) {
             java.util.Scanner scanner = new java.util.Scanner(System.in);
 
@@ -53,4 +52,38 @@ public class ConverterMetrosCentimetros {
                 scanner.close();
             }
         }
-    
+    ----------------------------------------------------------------------------------------------------------------
+     
+//Estrutura de Condição e Repetição nos ajuda a obter algumas vantagens. Elaborar um programa que efetue a leitura de valores positivos inteiros até que um valor negativo seja informado. Ao final, devem ser apresentados o maior e menor valores informados pelo usuário.
+import java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int numero, maior = Integer.MIN_VALUE, menor = Integer.MAX_VALUE;
+
+        System.out.println("Digite valores positivos inteiros (digite um valor negativo para sair):");
+
+        do {
+            numero = scanner.nextInt();
+
+            if (numero > 0) {
+                if (numero > maior) {
+                    maior = numero;
+                }
+                if (numero < menor) {
+                    menor = numero;
+                }
+            }
+        } while (numero >= 0);
+
+        if (maior != Integer.MIN_VALUE && menor != Integer.MAX_VALUE) {
+            System.out.println("O maior valor digitado foi: " + maior);
+            System.out.println("O menor valor digitado foi: " + menor);
+        } else {
+            System.out.println("Nenhum valor positivo foi digitado.");
+        }
+
+        scanner.close();
+    }
+}
